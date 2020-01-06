@@ -1,0 +1,10 @@
+<h1>{{ title }}</h1>
+<style type="text/css">
+  agm-map {
+  height: 550px;
+}
+</style>
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="center.lat" [longitude]="center.lng" (mapReady)="onMapReady($event)"> 
+</agm-map> 

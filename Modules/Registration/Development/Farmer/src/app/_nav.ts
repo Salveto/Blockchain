@@ -21,7 +21,7 @@ export const navItems: INavData[] = [
     icon: 'icon-location-pin',
     children: [
       {
-        name: 'Marketing',
+        name: 'Fertilizers',
         url: '/base/cards',
         icon: 'icon'
       },
@@ -31,7 +31,7 @@ export const navItems: INavData[] = [
         icon: 'icon'
       },
       {
-        name: 'Fertilizers',
+        name: 'Marketing',
         url: '/base/collapses',
         icon: 'icon'
       },
