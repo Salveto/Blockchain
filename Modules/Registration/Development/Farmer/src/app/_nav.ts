@@ -69,8 +69,8 @@ export const navItems: INavData[] = [
     ]
   },
    {
-    name: 'Schemes',
-    url: '/notifications',
+    name: 'Crop Insurane Schemes',
+    url: '/notifications/alerts',
     icon: 'icon-bell',
     children: [
       {
