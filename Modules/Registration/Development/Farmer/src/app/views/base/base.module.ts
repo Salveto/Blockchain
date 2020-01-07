@@ -2,7 +2,7 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-
+import { AgmCoreModule } from '@agm/core';
 import { CardsComponent } from './cards.component';
 
 // Forms Component
@@ -51,6 +51,7 @@ import { BaseRoutingModule } from './base-routing.module';
   imports: [
     CommonModule,
     FormsModule,
+    AgmCoreModule,
     BaseRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule,

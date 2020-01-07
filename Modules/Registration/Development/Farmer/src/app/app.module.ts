@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { AgmCoreModule } from '@agm/core';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
@@ -48,6 +48,10 @@ import { FarregComponent } from './views/farreg/farreg.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCAw1DjaQgTvGh_QNhjMrMrIxDnuVf-BZg',
+      libraries: ['drawing']
+    }),
     AppRoutingModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),

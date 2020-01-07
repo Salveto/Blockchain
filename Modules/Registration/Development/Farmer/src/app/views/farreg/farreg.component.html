@@ -45,8 +45,15 @@
                   </div>
                   <input type="text" class="form-control" placeholder="place" autocomplete="place" required>
                 </div>
+                <div>
+                  <p><b>Select your land</b></p>
+                </div>
+                <div >
+                  <agm-map [latitude]="center.lat" [longitude]="center.lng" (mapReady)="onMapReady($event)"> 
+                  </agm-map>
+                </div>
                 <a href="#/dashboard">
-                <button type="button" class="btn btn-block btn-success">Register</button>
+                <button type="button" class="btn btn-block btn-success" style="margin-top:50px;">Register</button>
               </a>
               </form>
             </div>
@@ -57,3 +64,14 @@
     </div>
   </main>
 </div>
+
+
+<style type="text/css">
+  agm-map {
+  height: 250px;
+  margin-bottom: 30px;
+}
+</style>
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+ 

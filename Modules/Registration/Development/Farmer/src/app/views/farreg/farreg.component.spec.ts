@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FarregComponent } from './farreg.component';
+import { MapLoaderService } from './map.loader';
+declare const google: any;
+
 
 describe('FarregComponent', () => {
   let component: FarregComponent;
