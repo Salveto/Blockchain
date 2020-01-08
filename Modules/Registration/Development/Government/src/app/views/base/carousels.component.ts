@@ -1,73 +1,40 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
-import { MapLoaderService } from './map.loader'
-declare const google: any;
+
 @Component({
   templateUrl: 'carousels.component.html',
-  
+  providers: [
+    { provide: CarouselConfig, useValue: { interval: 1500, noPause: false } },
+  ]
 })
-export class CarouselsComponent  {
-  center: any = {
-    lat: 33.5362475,
-    lng: -111.9267386
-  };
+export class CarouselsComponent implements OnDestroy {
 
-  onMapReady(map) {
-    this.initDrawingManager(map);
+  myInterval: number | false = 6000;
+  slides: any[] = [];
+  activeSlideIndex: number = 0;
+  noWrapSlides: boolean = false;
+
+  constructor() {
+    for (let i = 0; i < 4; i++) {
+      this.addSlide();
+    }
   }
 
-  initDrawingManager(map: any) {
-    const options = {
-      drawingControl: true,
-      drawingControlOptions: {
-        drawingModes: ["polygon"]
-      },
-      polygonOptions: {
-        draggable: true,
-        editable: true
-      },
-      drawingMode: google.maps.drawing.OverlayType.POLYGON
-    };
+  ngOnDestroy(): void {
+    this.myInterval = 0;
+    this.noWrapSlides = true;
+    this.myInterval = false;
+  }
 
-
-    var temp;
-    var drawingManager = new google.maps.drawing.DrawingManager(options);
-    drawingManager.setMap(map);
-
-
-
-    google.maps.event.addListener(drawingManager, 'overlaycomplete', (event) => {
-      // Polygon drawn
-      if (event.type === google.maps.drawing.OverlayType.POLYGON) {
-        //Co-ordinates
-        temp = event;
-        console.log(event.overlay.getPath().getArray());
-
-        
-      }
+  addSlide(): void {
+    this.slides.push({
+      image: `https://lorempixel.com/900/500/abstract/${this.slides.length % 8 + 1}/`
     });
-
-
-     google.maps.event.addListener(map, 'rightclick', (event) => {
-              console.log(temp.overlay.getPath().clear());
-     });
-     
-     
-
-
   }
 
-
-
-  collapsed(event: any): void {
-    // console.log(event);
-  }
-
-  expanded(event: any): void {
-    // console.log(event);
-  }
-  ngOnDestroy() {
-    
+  removeSlide(index?: number): void {
+    const toRemove = index ? index : this.activeSlideIndex;
+    this.slides.splice(toRemove, 1);
   }
 
 }

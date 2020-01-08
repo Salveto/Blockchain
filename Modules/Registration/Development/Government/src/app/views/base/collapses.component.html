@@ -1,11 +1,26 @@
-<h1>{{ title }}</h1>
-<style type="text/css">
-  agm-map {
-  height: 505px;
-}
-</style>
-<!-- this creates a google map on the page with the given lat/lng from -->
-<!-- the component as the initial center of the map: -->
-<agm-map [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map>
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header">
+      Bootstrap Collapse
+      <div class="card-header-actions">
+        <a href="https://valor-software.com/ngx-bootstrap/#/collapse" target="_blank">
+          <small className="text-muted">docs</small>
+        </a>
+      </div>
+    </div>
+    <div class="card-body"
+         (collapsed)="collapsed($event)"
+         (expanded)="expanded($event)"
+         [collapse]="isCollapsed">
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+        consequat.
+      </p>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary"
+              (click)="isCollapsed = !isCollapsed">Toggle collapse
+      </button>
+    </div>
+  </div>
+</div>

@@ -2,9 +2,9 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-
-import { CardsComponent } from './cards.component';
 import { AgmCoreModule } from '@agm/core';
+import { CardsComponent } from './cards.component';
+
 // Forms Component
 import { FormsComponent } from './forms.component';
 
@@ -46,15 +46,13 @@ import { TooltipsComponent } from './tooltips.component';
 // Components Routing
 import { BaseRoutingModule } from './base-routing.module';
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    AgmCoreModule,
     BaseRoutingModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCAw1DjaQgTvGh_QNhjMrMrIxDnuVf-BZg',
-      libraries: ['drawing']
-    }),
     BsDropdownModule.forRoot(),
     TabsModule,
     CarouselModule.forRoot(),
@@ -75,7 +73,8 @@ import { BaseRoutingModule } from './base-routing.module';
     PaginationsComponent,
     PopoversComponent,
     ProgressComponent,
-    TooltipsComponent
+    TooltipsComponent,
+   
   ]
 })
 export class BaseModule { }

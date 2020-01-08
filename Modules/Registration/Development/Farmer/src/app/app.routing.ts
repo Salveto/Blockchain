@@ -10,6 +10,8 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { LandingpageComponent } from './views/landingpage/landingpage.component';
 import { FarregComponent } from './views/farreg/farreg.component';
+import { AuthGuard } from './routing/auth.guard';
+
 
 export const routes: Routes = [
   {

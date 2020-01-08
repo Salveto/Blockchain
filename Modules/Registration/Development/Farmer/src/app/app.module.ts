@@ -42,7 +42,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { LandingpageComponent } from './views/landingpage/landingpage.component';
 import { FarregComponent } from './views/farreg/farreg.component';
-
+import { AuthGuard } from './routing/auth.guard';
 
 @NgModule({
   imports: [
@@ -78,7 +78,7 @@ import { FarregComponent } from './views/farreg/farreg.component';
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
-  }],
+  },AuthGuard],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

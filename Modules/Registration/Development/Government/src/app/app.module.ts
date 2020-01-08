@@ -2,8 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
+import { AgmCoreModule } from '@agm/core';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
@@ -41,12 +40,18 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
+import { LandingpageComponent } from './views/landingpage/landingpage.component';
+import { FarregComponent } from './views/farreg/farreg.component';
+import { AuthGuard } from './routing/auth.guard';
 
 @NgModule({
   imports: [
     BrowserModule,
-    
     BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCAw1DjaQgTvGh_QNhjMrMrIxDnuVf-BZg',
+      libraries: ['drawing']
+    }),
     AppRoutingModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
@@ -56,7 +61,6 @@ import { ChartsModule } from 'ng2-charts';
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    
     ChartsModule
   ],
   declarations: [
@@ -65,12 +69,16 @@ import { ChartsModule } from 'ng2-charts';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LandingpageComponent,
+    FarregComponent,
+    
+   
   ],
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
-  }],
+  },AuthGuard],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
