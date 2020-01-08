@@ -1,5 +1,6 @@
 import {Component, OnDestroy} from '@angular/core';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
+import { DataService } from '../../services/data.service';
 
 @Component({
   templateUrl: 'carousels.component.html',
@@ -7,34 +8,18 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
     { provide: CarouselConfig, useValue: { interval: 1500, noPause: false } },
   ]
 })
-export class CarouselsComponent implements OnDestroy {
+export class CarouselsComponent  {
 
-  myInterval: number | false = 6000;
-  slides: any[] = [];
-  activeSlideIndex: number = 0;
-  noWrapSlides: boolean = false;
-
-  constructor() {
-    for (let i = 0; i < 4; i++) {
-      this.addSlide();
-    }
+  PendingRequests;
+  constructor(private dataservice: DataService) { 
+      this.PendingRequests = this.getPendingRequests("pending");
   }
 
-  ngOnDestroy(): void {
-    this.myInterval = 0;
-    this.noWrapSlides = true;
-    this.myInterval = false;
+  
+  getPendingRequests(status)
+  {
+    return this.dataservice.getUserRequestStatus("pending");
   }
 
-  addSlide(): void {
-    this.slides.push({
-      image: `https://lorempixel.com/900/500/abstract/${this.slides.length % 8 + 1}/`
-    });
-  }
-
-  removeSlide(index?: number): void {
-    const toRemove = index ? index : this.activeSlideIndex;
-    this.slides.splice(toRemove, 1);
-  }
 
 }

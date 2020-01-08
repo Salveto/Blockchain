@@ -12,6 +12,7 @@ import { PaginationsComponent } from './paginations.component';
 import {PopoversComponent} from './popovers.component';
 import {ProgressComponent} from './progress.component';
 import {TooltipsComponent} from './tooltips.component';
+import {DocumentComponent} from '../../components/document/document.component';
 
 const routes: Routes = [
   {
@@ -29,7 +30,9 @@ const routes: Routes = [
         component: CardsComponent,
         data: {
           title: 'Cards'
-        }
+        },
+        
+        
       },
       {
         path: 'forms',
@@ -53,11 +56,9 @@ const routes: Routes = [
         }
       },
       {
-        path: 'tabs',
-        component: TabsComponent,
-        data: {
-          title: 'Tabs'
-        }
+        path: 'docs',
+        component: DocumentComponent,
+        
       },
       {
         path: 'carousels',

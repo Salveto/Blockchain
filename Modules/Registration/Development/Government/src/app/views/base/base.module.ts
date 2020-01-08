@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 import { CardsComponent } from './cards.component';
+import { DocumentComponent } from '../../components/document/document.component';
+
 
 // Forms Component
 import { FormsComponent } from './forms.component';
@@ -74,7 +76,7 @@ import { BaseRoutingModule } from './base-routing.module';
     PopoversComponent,
     ProgressComponent,
     TooltipsComponent,
-   
+    DocumentComponent,
   ]
 })
 export class BaseModule { }

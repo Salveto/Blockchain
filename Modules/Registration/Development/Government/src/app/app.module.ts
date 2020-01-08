@@ -21,6 +21,7 @@ import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 
+
 const APP_CONTAINERS = [
   DefaultLayoutComponent
 ];
@@ -37,12 +38,15 @@ import {
 import { AppRoutingModule } from './app.routing';
 
 // Import 3rd party components
+import { HttpClientModule } from '@angular/common/http';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { LandingpageComponent } from './views/landingpage/landingpage.component';
 import { FarregComponent } from './views/farreg/farreg.component';
 import { AuthGuard } from './routing/auth.guard';
+import { DataService } from './services/data.service';
+
 
 @NgModule({
   imports: [
@@ -61,7 +65,8 @@ import { AuthGuard } from './routing/auth.guard';
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,
@@ -72,13 +77,14 @@ import { AuthGuard } from './routing/auth.guard';
     RegisterComponent,
     LandingpageComponent,
     FarregComponent,
+  
     
    
   ],
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
-  },AuthGuard],
+  },AuthGuard,DataService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

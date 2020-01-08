@@ -10,7 +10,6 @@ export const navItems: INavData[] = [
       text: ''
     }
   },
-  
   {
     title: true,
     name: 'Components'
@@ -23,7 +22,8 @@ export const navItems: INavData[] = [
       {
         name: 'Approved',
         url: '/base/cards',
-        icon: 'icon'
+        icon: 'icon',
+        
       },
       {
         name: 'Pending',
@@ -34,11 +34,10 @@ export const navItems: INavData[] = [
         name: 'Rejected',
         url: '/base/collapses',
         icon: 'icon'
-      },
-     
+      }
      
     ]
-  },
+  }
   
   
   

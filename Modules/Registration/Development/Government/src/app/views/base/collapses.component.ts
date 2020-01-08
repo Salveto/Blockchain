@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   templateUrl: 'collapses.component.html'
 })
 export class CollapsesComponent {
 
-  constructor() { }
-
-  isCollapsed: boolean = false;
-
-  collapsed(event: any): void {
-    // console.log(event);
+  RejectedRequests;
+  constructor(private dataservice: DataService) { 
+      this.RejectedRequests = this.getRejectedRequests("rejected");
   }
 
-  expanded(event: any): void {
-    // console.log(event);
+  
+  getRejectedRequests(status)
+  {
+    return this.dataservice.getUserRequestStatus("rejected");
   }
 
 }

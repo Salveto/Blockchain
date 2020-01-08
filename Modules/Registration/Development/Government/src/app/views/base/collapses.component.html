@@ -1,26 +1,41 @@
-<div class="animated fadeIn">
-  <div class="card">
-    <div class="card-header">
-      Bootstrap Collapse
-      <div class="card-header-actions">
-        <a href="https://valor-software.com/ngx-bootstrap/#/collapse" target="_blank">
-          <small className="text-muted">docs</small>
-        </a>
-      </div>
-    </div>
-    <div class="card-body"
-         (collapsed)="collapsed($event)"
-         (expanded)="expanded($event)"
-         [collapse]="isCollapsed">
-      <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-        consequat.
-      </p>
-    </div>
-    <div class="card-footer">
-      <button type="button" class="btn btn-primary"
-              (click)="isCollapsed = !isCollapsed">Toggle collapse
-      </button>
-    </div>
-  </div>
-</div>
+<style type="">
+  td, th {
+    text-align: center;
+  }
+</style>
+<table class="table table-bordered">
+<thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Name</th>
+    <th scope="col">Phone No</th>
+    <th scope="col">View</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td>Mark</td>
+    <td>6854796582</td>
+    <td>@mdo</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>Jacob</td>
+    <td>9874568532</td>
+    <td>@fat</td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td>Jacob1</td>
+    <td>9865789452</td>
+    <td>@fat1</td>
+  </tr>
+  <!-- <tr *ngFor="let RejectedRequest of RejectedRequests">
+    <td>{{ RejectedRequest.id }}</td>
+    <td> {{  RejectedRequest.name }} </td>
+    <td> {{ RejectedRequest.phone }}</td>
+    <td> {{ RejectedRequest.view }}</td>
+  </tr> -->
+</tbody>
+</table>
