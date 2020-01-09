@@ -43,6 +43,7 @@ import { ChartsModule } from 'ng2-charts';
 import { LandingpageComponent } from './views/landingpage/landingpage.component';
 import { FarregComponent } from './views/farreg/farreg.component';
 import { AuthGuard } from './routing/auth.guard';
+import { GroupLandComponent } from './components/group-land/group-land.component';
 
 @NgModule({
   imports: [
@@ -72,6 +73,7 @@ import { AuthGuard } from './routing/auth.guard';
     RegisterComponent,
     LandingpageComponent,
     FarregComponent,
+    GroupLandComponent,
     
    
   ],

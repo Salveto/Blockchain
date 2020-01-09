@@ -11,7 +11,7 @@ import { RegisterComponent } from './views/register/register.component';
 import { LandingpageComponent } from './views/landingpage/landingpage.component';
 import { FarregComponent } from './views/farreg/farreg.component';
 import { AuthGuard } from './routing/auth.guard';
-
+import { GroupLandComponent } from './components/group-land/group-land.component';
 
 export const routes: Routes = [
   {
@@ -52,6 +52,13 @@ export const routes: Routes = [
     component: RegisterComponent,
     data: {
       title: 'Register Page'
+    }
+  },
+  {
+    path: 'land',
+    component: GroupLandComponent,
+    data: {
+      title: 'Lands'
     }
   },
    {
@@ -102,7 +109,8 @@ export const routes: Routes = [
       }
     ]
   },
-  { path: '**', component: P404Component }
+  { path: '**', component: P404Component },
+  
 ];
 
 @NgModule({
