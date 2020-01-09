@@ -44,6 +44,7 @@ import { LandingpageComponent } from './views/landingpage/landingpage.component'
 import { FarregComponent } from './views/farreg/farreg.component';
 import { AuthGuard } from './routing/auth.guard';
 import { GroupLandComponent } from './components/group-land/group-land.component';
+import { GroupComponent } from './views/group/group.component';
 
 @NgModule({
   imports: [
@@ -74,6 +75,7 @@ import { GroupLandComponent } from './components/group-land/group-land.component
     LandingpageComponent,
     FarregComponent,
     GroupLandComponent,
+    GroupComponent,
     
    
   ],

@@ -12,6 +12,7 @@ import { LandingpageComponent } from './views/landingpage/landingpage.component'
 import { FarregComponent } from './views/farreg/farreg.component';
 import { AuthGuard } from './routing/auth.guard';
 import { GroupLandComponent } from './components/group-land/group-land.component';
+import { GroupComponent } from './views/group/group.component';
 
 export const routes: Routes = [
   {
@@ -64,6 +65,13 @@ export const routes: Routes = [
    {
     path: 'farreg',
     component: FarregComponent,
+    data: {
+      title: 'Register Page'
+    }
+  },
+  {
+    path: 'group',
+    component: GroupComponent,
     data: {
       title: 'Register Page'
     }
