@@ -15,8 +15,13 @@ export class GroupLandComponent implements OnInit {
     lat: 28.5362475,
     lng: -66.9267386
   };
+  id;
+  landArray;
   public show:boolean = false;
   public buttonName:any = 'Show';
+
+
+
   toggle() {
     this.show = !this.show;
 
@@ -27,17 +32,26 @@ export class GroupLandComponent implements OnInit {
       this.buttonName = "Show"
   }
 
+
+
   ngOnInit() {
 
   }
-  id;
-  groupLand;
+  
   constructor(private groupService: FarmerGroupService) {
-    this.groupLand = this.getDetails();
+    this.landArray = this.getDetails();
   }
 
+  //Get group recommendations
   getDetails() {
-      //return this.groupService.getGroupDetails(this.id);
+      //return this.groupService.getRecommendations(this.id);
+  }
+
+  join(id) {
+      var status =  this.groupService.joinGroup(id);
+      if(status) {
+        alert("Join Successful");
+      }
   }
   onMapReady(map) {
     this.initDrawingManager(map);

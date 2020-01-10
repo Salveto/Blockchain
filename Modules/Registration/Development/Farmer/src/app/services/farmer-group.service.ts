@@ -13,9 +13,10 @@ export class FarmerGroupService {
     })
   }
 
-  getGroupDetails(id) {
+  joinGroup(id) {
+    return true;
     return this.http.post('http://localhost',id).subscribe(data => {
-      //Get a list of groups
+
     })
   }
 }
