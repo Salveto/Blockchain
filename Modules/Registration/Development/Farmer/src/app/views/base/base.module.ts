@@ -5,6 +5,9 @@ import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 import { CardsComponent } from './cards.component';
 
+
+
+
 // Forms Component
 import { FormsComponent } from './forms.component';
 
@@ -41,17 +44,22 @@ import { ProgressComponent } from './progress.component';
 // Tooltip Component
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { TooltipsComponent } from './tooltips.component';
-
+import { GroupLandComponent } from '../../components/group-land/group-land.component';
 
 // Components Routing
 import { BaseRoutingModule } from './base-routing.module';
+
 
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    AgmCoreModule,
+ //   AgmCoreModule,
+  AgmCoreModule.forRoot({
+   apiKey: 'AIzaSyCAw1DjaQgTvGh_QNhjMrMrIxDnuVf-BZg',
+   libraries: ['drawing']
+ }),
     BaseRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule,
@@ -74,6 +82,9 @@ import { BaseRoutingModule } from './base-routing.module';
     PopoversComponent,
     ProgressComponent,
     TooltipsComponent,
+    GroupLandComponent,
+   
+  
    
   ]
 })

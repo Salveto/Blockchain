@@ -1,10 +1,60 @@
 <style type="text/css">
     agm-map {
-    height: 550px;
+    height: 450px;
+    width: 1250px;
   }
+  td, th {
+      text-align: center;
+    }
   </style>
-  <!-- this creates a google map on the page with the given lat/lng from -->
-  <!-- the component as the initial center of the map: -->
-  <agm-map [latitude]="center.lat" [longitude]="center.lng" (mapReady)="onMapReady($event)">
-    <agm-marker [latitude]="center.lat" [longitude]="center.lng"></agm-marker>
-  </agm-map>
+
+  
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Group ID</th>
+      <th scope="col">Group Name</th>
+      <th scope="col">Field1</th>
+      <th scope="col">View</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>6854796582</td>
+      <td >load<!-- <button type="button" (click)="loadDetails({{ ApprovedRequest.id }})"></button> --></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>9874568532</td>
+      <td><button type="button" (click)="toggle()" ng-model="myVar">{{ buttonName }}</button></td>
+    </tr>
+    <ng-container *ngIf="show">
+      <tr>
+        <td colspan="4">
+      <agm-map [latitude]="center.lat" [longitude]="center.lng" (mapReady)="onMapReady($event)"  >
+        <agm-marker [latitude]="center.lat" [longitude]="center.lng"></agm-marker>
+      </agm-map>
+      </td>
+      </tr>
+    </ng-container>
+    <tr>
+      <th scope="row">3</th>
+      <td>Jacob1</td>
+      <td>9865789452</td>
+      <td>@fat1</td>
+    </tr>
+    <!-- <tr *ngFor="let individualLand of groupLand">
+      <td>{{ individualLand.id }}</td>
+      <td> {{  individualLand.name }} </td>
+      <td> {{ individualLand.phone }}</td>
+      <td> {{ view </td>
+    </tr> -->
+  </tbody>
+</table>
+
+  

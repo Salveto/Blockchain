@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AgmCoreModule } from '@agm/core';
+
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { HttpClientModule } from '@angular/common/http';
+import { FarmerGroupService } from './services/farmer-group.service';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -43,17 +45,15 @@ import { ChartsModule } from 'ng2-charts';
 import { LandingpageComponent } from './views/landingpage/landingpage.component';
 import { FarregComponent } from './views/farreg/farreg.component';
 import { AuthGuard } from './routing/auth.guard';
-import { GroupLandComponent } from './components/group-land/group-land.component';
+
 import { GroupComponent } from './views/group/group.component';
+
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCAw1DjaQgTvGh_QNhjMrMrIxDnuVf-BZg',
-      libraries: ['drawing']
-    }),
+    
     AppRoutingModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
@@ -63,7 +63,8 @@ import { GroupComponent } from './views/group/group.component';
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
@@ -74,15 +75,17 @@ import { GroupComponent } from './views/group/group.component';
     RegisterComponent,
     LandingpageComponent,
     FarregComponent,
-    GroupLandComponent,
+   
     GroupComponent,
+   
+  
     
    
   ],
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
-  },AuthGuard],
+  },AuthGuard, FarmerGroupService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
