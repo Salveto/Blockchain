@@ -48,6 +48,8 @@ import { AuthGuard } from './routing/auth.guard';
 
 import { GroupComponent } from './views/group/group.component';
 
+import { FarmerRequestDetailsComponent } from './components/farmer-request-details/farmer-request-details.component';
+
 
 @NgModule({
   imports: [
@@ -75,8 +77,8 @@ import { GroupComponent } from './views/group/group.component';
     RegisterComponent,
     LandingpageComponent,
     FarregComponent,
-   
     GroupComponent,
+    FarmerRequestDetailsComponent,
    
   
     

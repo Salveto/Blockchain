@@ -7,7 +7,7 @@ import { CardsComponent } from './cards.component';
 
 
 
-
+import { MemberRequestsComponent } from '../../components/member-requests/member-requests.component';
 // Forms Component
 import { FormsComponent } from './forms.component';
 
@@ -83,7 +83,7 @@ import { BaseRoutingModule } from './base-routing.module';
     ProgressComponent,
     TooltipsComponent,
     GroupLandComponent,
-   
+    MemberRequestsComponent,
   
    
   ]

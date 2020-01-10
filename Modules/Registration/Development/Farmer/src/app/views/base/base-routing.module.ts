@@ -13,6 +13,7 @@ import {PopoversComponent} from './popovers.component';
 import {ProgressComponent} from './progress.component';
 import {TooltipsComponent} from './tooltips.component';
 import { GroupLandComponent } from '../../components/group-land/group-land.component';
+import { MemberRequestsComponent } from '../../components/member-requests/member-requests.component';
 
 const routes: Routes = [
   {
@@ -107,6 +108,13 @@ const routes: Routes = [
         component: TooltipsComponent,
         data: {
           title: 'Tooltips'
+        }
+      },
+      {
+        path:'requests',
+        component:MemberRequestsComponent,
+        data: {
+          title: 'Request'
         }
       }
     ]
