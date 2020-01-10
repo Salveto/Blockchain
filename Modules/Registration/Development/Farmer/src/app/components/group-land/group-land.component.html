@@ -36,12 +36,27 @@
       </td>
     </tr>
     <ng-container *ngIf="show">
-      <tr>
-        <td colspan="4">
-      <agm-map [latitude]="center.lat" [longitude]="center.lng" (mapReady)="onMapReady($event)"  >
-        <agm-marker [latitude]="center.lat" [longitude]="center.lng"></agm-marker>
-      </agm-map>
-      </td>
+      <tr style="height:450px;scroll-behavior: auto;">
+        <td colspan="2">
+          <agm-map [latitude]="center.lat" [longitude]="center.lng" (mapReady)="onMapReady($event)"  >
+            <agm-marker [latitude]="center.lat" [longitude]="center.lng"></agm-marker>
+          </agm-map>
+        </td>
+        <td colspan="2" >
+            <p >Member1 name</p>
+            <p>Member2 name</p>
+            <p >Member3 name</p>
+            <p>Member4 name</p>
+            <p >Member5 name</p>
+            <p>Member6 name</p>
+            <p >Member1 name</p>
+            <p>Member2 name</p>
+            <p >Member3 name</p>
+            <p>Member4 name</p>
+            <p >Member5 name</p>
+            <p>Member6 name</p>
+           
+        </td>
       </tr>
     </ng-container>
     <tr>

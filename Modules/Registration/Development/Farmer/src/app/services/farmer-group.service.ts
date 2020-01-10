@@ -19,4 +19,12 @@ export class FarmerGroupService {
 
     })
   }
+
+  create(id) {
+    return true;
+    //real code
+    return this.http.post('htto://localhost',id).subscribe(data => {
+
+    });
+  }
 }

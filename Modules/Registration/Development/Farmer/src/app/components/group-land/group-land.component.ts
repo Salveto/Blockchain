@@ -11,6 +11,7 @@ declare const google: any;
 export class GroupLandComponent implements OnInit {
  
   title = 'Lands';
+  n = 6
   center: any = {
     lat: 28.5362475,
     lng: -66.9267386
