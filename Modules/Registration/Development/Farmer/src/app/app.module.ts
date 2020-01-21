@@ -51,6 +51,7 @@ import { GroupComponent } from './views/group/group.component';
 import { FarmerRequestDetailsComponent } from './components/farmer-request-details/farmer-request-details.component';
 
 
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -79,6 +80,8 @@ import { FarmerRequestDetailsComponent } from './components/farmer-request-detai
     FarregComponent,
     GroupComponent,
     FarmerRequestDetailsComponent,
+
+   
    
   
     

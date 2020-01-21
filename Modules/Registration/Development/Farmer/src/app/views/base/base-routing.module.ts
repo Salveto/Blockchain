@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {AuthGuard} from '../../guards/auth.guard';
 
 import { CardsComponent } from './cards.component';
 import { FormsComponent } from './forms.component';
@@ -14,14 +15,72 @@ import {ProgressComponent} from './progress.component';
 import {TooltipsComponent} from './tooltips.component';
 import { GroupLandComponent } from '../../components/group-land/group-land.component';
 import { MemberRequestsComponent } from '../../components/member-requests/member-requests.component';
+import { FertilizersComponent } from '../../components/fertilizers/fertilizers.component';
+import { MachineriesComponent } from '../../components/machineries/machineries.component';
+import { MarketingComponent } from '../../components/marketing/marketing.component';
+import { StorageComponent } from '../../components/storage/storage.component';
+import { LoansComponent } from '../../components/loans/loans.component';
+import { InsuranceComponent } from '../../insurance/insurance.component';
+import { CropInsuranceComponent } from '../../components/crop-insurance/crop-insurance.component';
+
 
 const routes: Routes = [
   {
     path: '',
+    canActivate: [AuthGuard],
     data: {
       title: 'Base'
     },
     children: [
+      {
+        path: 'fertilizers',
+        component: FertilizersComponent,
+        data: {
+          title: 'fertilizers'
+        }
+      },
+      {
+        path: 'machineries',
+        component: MachineriesComponent,
+        data: {
+          title: 'machineries'
+        }
+      },
+      {
+        path: 'marketing',
+        component: MarketingComponent,
+        data: {
+          title: 'marketing'
+        }
+      },
+      {
+        path: 'storage',
+        component: StorageComponent,
+        data: {
+          title: 'storage'
+        }
+      },
+      {
+        path: 'loans',
+        component: LoansComponent,
+        data: {
+          title: 'loans'
+        }
+      },
+      {
+        path: 'insurance',
+        component: InsuranceComponent,
+        data: {
+          title: 'insurance'
+        }
+      },
+      {
+        path: 'cropinsurance',
+        component: CropInsuranceComponent,
+        data: {
+          title: 'crop-insurance'
+        }
+      },
       {
         path: '',
         redirectTo: 'cards'

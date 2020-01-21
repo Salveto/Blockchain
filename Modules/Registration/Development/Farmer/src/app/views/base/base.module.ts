@@ -49,6 +49,14 @@ import { GroupLandComponent } from '../../components/group-land/group-land.compo
 // Components Routing
 import { BaseRoutingModule } from './base-routing.module';
 
+//Custom
+import { FertilizersComponent } from '../../components/fertilizers/fertilizers.component';
+import { MachineriesComponent } from '../../components/machineries/machineries.component';
+import { MarketingComponent } from '../../components/marketing/marketing.component';
+import { StorageComponent } from '../../components/storage/storage.component';
+import { LoansComponent } from '../../components/loans/loans.component';
+import { InsuranceComponent } from '../../insurance/insurance.component';
+import { CropInsuranceComponent } from '../../components/crop-insurance/crop-insurance.component';
 
 
 @NgModule({
@@ -84,8 +92,13 @@ import { BaseRoutingModule } from './base-routing.module';
     TooltipsComponent,
     GroupLandComponent,
     MemberRequestsComponent,
-  
-   
+    FertilizersComponent,
+    MachineriesComponent,
+    MarketingComponent,
+    StorageComponent,
+    LoansComponent,
+    InsuranceComponent,
+    CropInsuranceComponent,
   ]
 })
 export class BaseModule { }

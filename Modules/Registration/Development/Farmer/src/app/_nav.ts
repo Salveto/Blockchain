@@ -2,7 +2,7 @@ import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
   {
-    name: 'Framer',
+    name: 'Farmer',
     url: '/dashboard',
     icon: 'icon-speedometer',
     badge: {
@@ -22,22 +22,22 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'Fertilizers',
-        url: '/base/cards',
+        url: '/base/fertilizers',
         icon: 'icon'
       },
       {
         name: 'Machinaries',
-        url: '/base/carousels',
+        url: '/base/machineries',
         icon: 'icon'
       },
       {
         name: 'Marketing',
-        url: '/base/collapses',
+        url: '/base/marketing',
         icon: 'icon'
       },
       {
         name: 'Storage',
-        url: '/base/forms',
+        url: '/base/storage',
         icon: 'icon'
       }
      
@@ -58,24 +58,24 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'Loans',
-        url: '/notifications/alerts',
+        url: '/base/loans',
         icon: 'icon'
       },
       {
         name: 'Insurance',
-        url: '/notifications/badges',
+        url: '/base/insurance',
         icon: 'icon'
       }
     ]
   },
    {
-    name: 'Crop Insurane Schemes',
+    name: 'Insurance Schemes',
     url: '/notifications/alerts',
     icon: 'icon-bell',
     children: [
       {
-        name: 'Crop insurance schemes',
-        url: '/notifications/alerts',
+        name: 'Crop insurance',
+        url: '/base/cropinsurance',
         icon: 'icon'
       }
     ]
@@ -87,15 +87,6 @@ export const navItems: INavData[] = [
     icon: 'icon-people',
    
     },
-  {
-    name: 'Widgets',
-    url: '/widgets',
-    icon: 'icon-calculator',
-    badge: {
-      variant: 'info',
-      text: 'NEW'
-    }
-  },
   
    
 

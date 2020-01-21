@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import {Router} from "@angular/router"
 
 @Component({
@@ -8,8 +8,12 @@ import {Router} from "@angular/router"
 })
 export class LoginComponent { 
 
-  constructor(/*private Auth: AuthService,*/ private router: Router) {
+  constructor(private authService: AuthService, private router: Router) {
 
+  }
+
+  ngOnInit() {
+    this.authService.logout();
   }
 
   loginUser(event) {
@@ -17,9 +21,7 @@ export class LoginComponent {
     const target = event.target;
     const username = target.querySelector('#username').value;
     const password = target.querySelector('#password').value;
-    //this.Auth.getUserDetails(username, password);
-    console.log("Done");
-    this.router.navigate(['/dashboard'])
+    this.authService.logIn(username, password);
   }
 
 }
