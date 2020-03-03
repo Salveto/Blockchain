@@ -1,0 +1,66 @@
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card mx-4">
+            <div class="card-body p-4">
+              <form  (submit) = "register($event)">
+                <h1>Register</h1>
+                <p class="text-muted">Fill the details</p>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="user id" id="name" autocomplete="user id" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">E</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="License Id" id="Lid" autocomplete="License" required>
+                </div>
+                <!--phone number-->
+                
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">S</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="state" id="state"  autocomplete="state" required>
+                </div>
+                <div class="input-group mb-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">D</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="district" id="district" autocomplete="district" required>
+                </div>
+                 <div class="input-group mb-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">P</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="place" id="place" autocomplete="place" required>
+                </div>
+                
+                <a href="#/dashboard">
+                <button type="submit" class="btn btn-primary px-4" style="margin-top:50px;">Register</button>
+                </a>
+              </form>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<style type="text/css">
+  agm-map {
+  height: 250px;
+  margin-bottom: 30px;
+}
+</style>
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+ 

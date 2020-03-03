@@ -1,0 +1,67 @@
+<div class="animated fadeIn">
+  <div class="row">
+   
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          Machine1
+          
+        </div>
+        <div class="card-body">
+          <carousel [interval]="myInterval" [noWrap]="noWrapSlides" [(activeSlide)]="activeSlideIndex">
+            <slide *ngFor="let slide of slides; let index=index">
+              <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+
+              <div class="carousel-caption">
+                <h4>Slide {{index}}</h4>
+                <p>{{slide.text}}</p>
+              </div>
+            </slide>
+          </carousel>
+          <br/>
+          <div>
+            <button type="button" class="btn btn-info"
+                    (click)="addSlide()">Add Slide
+            </button>
+            <button type="button" class="btn btn-info"
+                    (click)="removeSlide()">Remove Machine
+            </button>
+            
+          </div>
+         
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          Machine1
+          
+        </div>
+        <div class="card-body">
+          <carousel [interval]="myInterval" [noWrap]="noWrapSlides" [(activeSlide)]="activeSlideIndex">
+            <slide *ngFor="let slide of slides; let index=index">
+              <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+
+              <div class="carousel-caption">
+                <h4>Slide {{index}}</h4>
+                <p>{{slide.text}}</p>
+              </div>
+            </slide>
+          </carousel>
+          <br/>
+          <div>
+            <button type="button" class="btn btn-info"
+                    (click)="addSlide()">Add Slide
+            </button>
+            <button type="button" class="btn btn-info"
+                    (click)="removeSlide()">Remove Machine
+            </button>
+            
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

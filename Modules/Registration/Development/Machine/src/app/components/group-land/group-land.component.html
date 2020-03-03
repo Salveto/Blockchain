@@ -1,0 +1,77 @@
+<style type="text/css">
+    agm-map {
+    height: 450px;
+    width: 100%;
+  }
+  td, th {
+      text-align: center;
+    }
+  </style>
+
+  
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Group ID</th>
+      <th scope="col">Group Name</th>
+      <th scope="col">Field1</th>
+      <th scope="col">View</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>6854796582</td>
+      <td >load<!-- <button type="button" (click)="loadDetails({{ ApprovedRequest.id }})"></button> --></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>9874568532</td>
+      <td><button type="button" (click)="toggle()" ng-model="myVar">{{ buttonName }}</button>
+        <button type="button" (click)="join(1)" >Request</button>
+      </td>
+    </tr>
+    <ng-container *ngIf="show">
+      <tr style="height:450px;scroll-behavior: auto;">
+        <td colspan="2">
+          <agm-map [latitude]="center.lat" [longitude]="center.lng" (mapReady)="onMapReady($event)"  >
+            <agm-marker [latitude]="center.lat" [longitude]="center.lng"></agm-marker>
+          </agm-map>
+        </td>
+        <td colspan="2" >
+            <p >Member1 name</p>
+            <p>Member2 name</p>
+            <p >Member3 name</p>
+            <p>Member4 name</p>
+            <p >Member5 name</p>
+            <p>Member6 name</p>
+            <p >Member1 name</p>
+            <p>Member2 name</p>
+            <p >Member3 name</p>
+            <p>Member4 name</p>
+            <p >Member5 name</p>
+            <p>Member6 name</p>
+           
+        </td>
+      </tr>
+    </ng-container>
+    <tr>
+      <th scope="row">3</th>
+      <td>Jacob1</td>
+      <td>9865789452</td>
+      <td>@fat1</td>
+    </tr>
+    <!-- <tr *ngFor="let land of landArray">
+      <td>{{ land.id }}</td>
+      <td> {{  land.name }} </td>
+      <td> {{ land.something }}</td>
+      <td>  </td>
+    </tr> -->
+  </tbody>
+</table>
+
+  
