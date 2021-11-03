@@ -19,7 +19,7 @@
     "password-validator": "^5.0.3",
     "type-of-is": "^3.5.1",
     "validate-phone-number-node-js": "0.0.1",
-    "validator": "^12.1.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
